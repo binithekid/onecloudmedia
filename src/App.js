@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Home from "./Home";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import About from "./About/About";
+import Work from "./Work/Work";
+import Contact from "./Contact/Contact";
+import UkDispatch from "./components/UKDispatch/UkDispatch";
+import RmPestControl from "./components/RmPestControl/RmPestControl";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path='/'>
+          <Home />
+        </Route>
+        <Route exact path='/about'>
+          <About />
+        </Route>
+        <Route exact path='/work'>
+          <Work />
+        </Route>
+        <Route exact path='/contact'>
+          <Contact />
+        </Route>
+        <Route exact path='/ukdispatch'>
+          <UkDispatch />
+        </Route>
+        <Route exact path='/rmpestcontrol'>
+          <RmPestControl />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
-
-export default App;
