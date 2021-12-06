@@ -200,7 +200,7 @@ export default function Contact() {
               <Grid item xs={12} sm={6}>
                 <div className='iconButtonContact'>
                   <Button
-                    href='tel: 07762279787'
+                    href='tel: 07546096173'
                     variant='contained'
                     color='secondary'
                     style={{
@@ -217,7 +217,7 @@ export default function Contact() {
                     }}
                     className='buttonStyle'
                     startIcon={<PhoneIcon />}>
-                    <p>(+44) 07762 279 787</p>
+                    <p>(+44) 0754 609 6173</p>
                   </Button>
                 </div>
                 <div className='iconButtonContact'>
